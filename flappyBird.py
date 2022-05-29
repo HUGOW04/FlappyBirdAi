@@ -35,7 +35,7 @@ class Bird:
 
         self.x = x
         self.y = y
-        self.tilt = 0  # degrees to tilt
+        self.tilt = 0  
         self.tick_count = 0
         self.vel = 0
         self.height = self.y
@@ -53,7 +53,7 @@ class Bird:
         self.tick_count += 1
 
        
-        displacement = self.vel*(self.tick_count) + 0.5*(3)*(self.tick_count)**2  # calculate displacement
+        displacement = self.vel*(self.tick_count) + 0.5*(3)*(self.tick_count)**2  
 
         
         if displacement >= 16:
@@ -221,7 +221,7 @@ def draw_window(win, birds, pipes, base, score, gen, pipe_ind):
     score_label = STAT_FONT.render("Gens: " + str(gen-1),1,(255,255,255))
     win.blit(score_label, (10, 10))
 
-    # alive
+    
     score_label = STAT_FONT.render("Alive: " + str(len(birds)),1,(255,255,255))
     win.blit(score_label, (10, 50))
 
